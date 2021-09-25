@@ -3,7 +3,7 @@ output "template-file" {
 }
 
 output "ecs-cluter" {
-  value = aws_ecs_cluster.main.id
+  value = aws_ecs_cluster.main.arn
 }
 
 output aws_task {
@@ -11,5 +11,5 @@ output aws_task {
 }
 
 output ecs_service {
-  value = aws_ecs_service.main.id
+  value = aws_ecs_service.main.name
 }

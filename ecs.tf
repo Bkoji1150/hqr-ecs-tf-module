@@ -1,7 +1,7 @@
 #root/ecs.tf
 
 module "ecs" {
-  source         = "git::ssh://git@github.com:Bkoji1150/hqr-ecs-tf-module.git"
+  source         = "./ecs"
   ecs-cluster    = "myapp-cluster"
   app_image      = lookup(var.app_image, terraform.workspace)
   app_port       = var.app_port
