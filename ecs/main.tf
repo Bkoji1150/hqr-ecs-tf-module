@@ -4,7 +4,7 @@ resource "aws_ecs_cluster" "main" {
 
 
 data "template_file" "myapp" {
-  template = file("myapp.json.tpl")
+  template = templatefile("myapp.json.tpl")
 
   vars = {
     app_image      = var.app_image #lookup(var.app_image, terraform.workspace)
